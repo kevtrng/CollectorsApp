@@ -21,5 +21,9 @@ class HomeController extends Controller
 		return view('/home/register');
 	}
 
+	public function landing() {
+		return view ('home/landing');
+	}
+
 
 }
