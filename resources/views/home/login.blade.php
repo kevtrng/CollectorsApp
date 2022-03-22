@@ -1,4 +1,3 @@
-
 <!DOCTYPE html>
 @extends('layouts.app')
 @section('content')
@@ -19,11 +18,6 @@
 			<div class="imagestuff"></div>
 
 		</div>
-
-		
-
-
 	</body>
 </html>
 @endsection
-
