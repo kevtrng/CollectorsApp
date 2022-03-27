@@ -15,7 +15,7 @@ return [
     |
     */
 
-    'default' => env('DB_CONNECTION', 'mysql'),
+    'default' => env('DB_CONNECTION', 'mongodb'),
 
     /*
     |--------------------------------------------------------------------------
@@ -34,6 +34,10 @@ return [
     */
 
     'connections' => [
+		'mongodb' => [
+			'driver' => 'mongodb',
+			'dsn' => env('DB_URI', 'mongodb+srv://theMongoAdmin:accidentalLoginSteps@cluster0.rtwnk.mongodb.net/collector?retryWrites=true&w=majority'),
+		],
 
         'sqlite' => [
             'driver' => 'sqlite',
