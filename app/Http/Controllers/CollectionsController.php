@@ -17,4 +17,14 @@ class CollectionsController extends Controller
 		return view('/collections');
 	}
 
+    public function list() {
+        return view('/collections/list');
+    }
+
+    public function addItem() {
+        return view('/collections/list/additem');
+    }
+
+    public function addItemPost() {
+    }
 }

@@ -22,9 +22,19 @@ Route::get('/login', function () {
 Route::get('/register', function () {
     return view('home/register');
 });
+
 Route::get('/collections', function () {
     return view('collections/index');
 });
+Route::get('/collections/list', function () {
+    return view('collections/list');
+});
+Route::get('/collections/list/additem', function () {
+    return view('collections/addItem');
+});
+Route::post('/collections/list/additem', 'CollectionsController@addItemPost');
+
+
 Route::get('/dashboard', function () {
     return view('dashboard/index');
 });
@@ -37,4 +47,5 @@ Route::get('/wishlist', function () {
 Route::get('/trade', function () {
     return view('trade/index');
 });
+
 

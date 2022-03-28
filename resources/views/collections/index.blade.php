@@ -13,7 +13,8 @@
             <li>collection item</li>
             <li>collection item</li>
         </ul>
-        <button>view full list</button>
+        <button type="button" onclick="window.location='{{ url("collections/list") }}'">
+        view full list</button>
         <p>total worth: $1000</p>
     </div>
 
