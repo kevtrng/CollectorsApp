@@ -13,17 +13,8 @@ use Illuminate\Http\Request;
 
 class CollectionsController extends Controller
 {
-    public function login() {
-		return view('/home/login');
+    public function index() {
+		return view('/collections');
 	}
-
-    public function register() {
-		return view('/home/register');
-	}
-
-	public function landing() {
-		return view ('home/landing');
-	}
-
 
 }

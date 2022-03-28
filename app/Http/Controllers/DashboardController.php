@@ -13,16 +13,9 @@ use Illuminate\Http\Request;
 
 class DashboardController extends Controller
 {
-    public function login() {
-		return view('/home/login');
-	}
 
-    public function register() {
-		return view('/home/register');
-	}
-
-	public function landing() {
-		return view ('home/landing');
+	public function index() {
+		return view ('dashboard');
 	}
 
 
