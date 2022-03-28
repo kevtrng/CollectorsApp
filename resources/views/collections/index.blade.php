@@ -1,6 +1,8 @@
 @extends('layouts.app')
 @section('content')
 
+    <h1>Your Collections</h1>
+
 <button>Create collection</button>
     <div>
 {{--        foreach this div--}}

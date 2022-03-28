@@ -28,4 +28,13 @@ Route::get('/collections', function () {
 Route::get('/dashboard', function () {
     return view('dashboard/index');
 });
+Route::get('/prevown', function () {
+    return view('prevown/index');
+});
+Route::get('/wishlist', function () {
+    return view('wishlist/index');
+});
+Route::get('/trade', function () {
+    return view('trade/index');
+});
 
