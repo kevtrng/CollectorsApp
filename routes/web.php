@@ -22,3 +22,10 @@ Route::get('/login', function () {
 Route::get('/register', function () {
     return view('home/register');
 });
+Route::get('/collections', function () {
+    return view('collections/index');
+});
+Route::get('/dashboard', function () {
+    return view('dashboard/index');
+});
+
