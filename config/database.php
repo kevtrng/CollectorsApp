@@ -36,7 +36,7 @@ return [
     'connections' => [
 		'mongodb' => [
 			'driver' => 'mongodb',
-			'dsn' => env('DB_URI', 'mongodb+srv://theMongoAdmin:accidentalLoginSteps@cluster0.rtwnk.mongodb.net/collector?retryWrites=true&w=majority'),
+			'dsn' => env('DB_URI'),
 		],
 
         'sqlite' => [
