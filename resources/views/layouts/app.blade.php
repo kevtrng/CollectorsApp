@@ -12,8 +12,8 @@
 @endguest
 <!-- Links appear only when authenticated. -->
 @auth
-    <a href='/'>Dashboard</a> |
-    <a href='/collection'>Collections</a> |
+    <a href='/dashboard'>Dashboard</a> |
+    <a href='/collections'>Collections</a> |
     <a href='/prevown'>Prev Owned</a> |
     <a href='/wishlist'>Wish List</a> |
     <a href='/trade'>Trade Requests</a> |

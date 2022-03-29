@@ -1,22 +1,24 @@
 <?php
-/*
-	for things that aren't for authenticated users
-	- login
-	- registration
-	- home page (before login)
-*/
-
 
 namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
-use App\Models\Item;
 
 class CollectionsController extends Controller
 {
-    public function item() {
-		$items = Item::all();
-		return view('/item', ['items' => $items]);
+   
+    public function index() {
+		return view('/collections');
 	}
 
+    public function list() {
+        return view('/collections/list');
+    }
+
+    public function addItem() {
+        return view('/collections/list/additem');
+    }
+
+    public function addItemPost() {
+    }
 }

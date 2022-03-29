@@ -24,7 +24,32 @@ Route::get('/login', function () {
 Route::get('/register', function () {
     return view('home/register');
 });
-// Route::get('/items', function() {
-// 	return view('item');
-// });
-Route::get('/items', 'App\Http\Controllers\CollectionsController@item');
+
+Route::get('/items', 'App\Http\Controllers\ItemController@item');
+
+Route::get('/collections', function () {
+    return view('collections/index');
+});
+Route::get('/collections/list', function () {
+    return view('collections/list');
+});
+Route::get('/collections/list/additem', function () {
+    return view('collections/addItem');
+});
+Route::post('/collections/list/additem', 'CollectionsController@addItemPost');
+
+
+Route::get('/dashboard', function () {
+    return view('dashboard/index');
+});
+Route::get('/prevown', function () {
+    return view('prevown/index');
+});
+Route::get('/wishlist', function () {
+    return view('wishlist/index');
+});
+Route::get('/trade', function () {
+    return view('trade/index');
+});
+
+
