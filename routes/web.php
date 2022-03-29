@@ -1,6 +1,8 @@
 <?php
 
 use Illuminate\Support\Facades\Route;
+use app\Models\Item;
+use app\Http\Controllers\CollectionsController;
 
 /*
 |--------------------------------------------------------------------------
@@ -22,3 +24,7 @@ Route::get('/login', function () {
 Route::get('/register', function () {
     return view('home/register');
 });
+// Route::get('/items', function() {
+// 	return view('item');
+// });
+Route::get('/items', 'App\Http\Controllers\CollectionsController@item');

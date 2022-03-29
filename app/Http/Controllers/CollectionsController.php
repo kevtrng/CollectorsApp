@@ -10,20 +10,13 @@
 namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
+use App\Models\Item;
 
 class CollectionsController extends Controller
 {
-    public function login() {
-		return view('/home/login');
+    public function item() {
+		$items = Item::all();
+		return view('/item', ['items' => $items]);
 	}
-
-    public function register() {
-		return view('/home/register');
-	}
-
-	public function landing() {
-		return view ('home/landing');
-	}
-
 
 }

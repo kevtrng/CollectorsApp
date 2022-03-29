@@ -13,11 +13,13 @@ return new class extends Migration
      */
     public function up()
     {
-        Schema::create('item', function (Blueprint $table) {
-            $table->id();
-			$table->string("name");
-			$table->string("description");
-            $table->timestamps();
+        Schema::create('item', function ($collection) {
+            $collection->id();
+			$collection->string("name");
+			$collection->string("description");
+			$collection->text("custom_fields");
+			$collection->foreignId('user_id')->constrained('users')->cascadeOnDelete()->cascadeOnUpdate();
+            $collection->timestamps();
         });
     }
 
