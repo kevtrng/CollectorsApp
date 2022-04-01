@@ -6,7 +6,7 @@ use Illuminate\Http\Request;
 
 class CollectionsController extends Controller
 {
-   
+
     public function index() {
 		return view('/collections');
 	}
@@ -20,5 +20,6 @@ class CollectionsController extends Controller
     }
 
     public function addItemPost() {
+
     }
 }
