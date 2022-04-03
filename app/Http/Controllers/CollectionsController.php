@@ -9,10 +9,13 @@ class CollectionsController extends Controller
 {
 
     public function index() {
-		return view('/collections');
+//        $collections = Collection::where('userEmail','=', 'test@test.com');
+        $collections = Collection::all();
+//        $collections = $collections->toArray();
+		return view('/collections/index', ['collections'=> $collections]);
 	}
 
-    public function list() {
+    public function list($id) {
         return view('/collections/list');
     }
     public function createCollection() {

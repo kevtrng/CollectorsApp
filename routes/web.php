@@ -28,9 +28,7 @@ Route::get('/register', function () {
 Route::post('/submitRegister', 'App\Http\Controllers\HomeController@submitRegister');
 Route::post('/submitLogin', 'App\Http\Controllers\HomeController@submitLogin');
 
-Route::get('/collections', function () {
-    return view('collections/index');
-});
+Route::get('/collections', 'App\Http\Controllers\CollectionsController@index');
 Route::get('/collections/list', function () {
     return view('collections/list');
 });
