@@ -3,6 +3,7 @@
 namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
+use App\Models\Collection;
 
 class CollectionsController extends Controller
 {
@@ -17,7 +18,16 @@ class CollectionsController extends Controller
     public function createCollection() {
         return view('/collections/list/createcollection');
     }
-    public function createCollectionPost() {
+    public function createCollectionPost(Request $request) {
+
+        $collection = new Collection();
+        $collection->collectionName = $request->name;
+        $collection->userEmail = "test@test.com";
+        $collection->items = [];
+
+        $collection->save();
+
+        return redirect('/collections/');
 
     }
 
@@ -25,7 +35,7 @@ class CollectionsController extends Controller
         return view('/collections/list/additem');
     }
 
-    public function addItemPost() {
+    public function addItemPost(Request $request) {
 
     }
 }

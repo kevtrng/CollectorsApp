@@ -39,11 +39,12 @@ Route::get('/collections/list', function () {
 Route::get('/collections/list/createcollection', function () {
     return view('collections/createcollection');
 });
-Route::post('/collections/createcollection', 'CollectionsController@createCollectionPost');
+Route::post('/collections/createcollection', 'App\Http\Controllers\CollectionsController@createCollectionPost');
+
 Route::get('/collections/list/additem', function () {
     return view('collections/addItem');
 });
-Route::post('/collections/additem', 'CollectionsController@addItemPost');
+Route::post('/collections/additem', 'App\Http\Controllers\CollectionsController@addItemPost');
 
 
 Route::get('/dashboard', function () {
