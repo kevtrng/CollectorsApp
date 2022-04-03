@@ -28,8 +28,6 @@ Route::get('/register', function () {
 Route::post('/submitRegister', 'App\Http\Controllers\HomeController@submitRegister');
 Route::post('/submitLogin', 'App\Http\Controllers\HomeController@submitLogin');
 
-Route::get('/items', 'App\Http\Controllers\ItemController@item');
-
 Route::get('/collections', function () {
     return view('collections/index');
 });
