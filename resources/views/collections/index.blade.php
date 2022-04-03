@@ -3,8 +3,9 @@
 
     <h1>Your Collections</h1>
 
-<button>Create collection</button>
-    <div>
+    <button type="button" onclick="window.location='{{ url("collections/list/createcollection") }}'">
+        Create Collection</button>
+        <div>
 {{--        foreach this div--}}
         <h2>title of collection</h2>
         <ul>

@@ -21,15 +21,6 @@
             <label for="price">Price
                 <input type="text" name="price"/>
             </label><br>
-            <label for="itemName">Item name
-                <input type="text" name="itemName"/>
-            </label><br>
-            <label for="itemName">Item name
-                <input type="text" name="itemName"/>
-            </label><br>
-            <label for="itemName">Item name
-                <input type="text" name="itemName"/>
-            </label><br>
             <label for="quantity">Units/Quantity
                 <input type="text" name="quantity"/>
             </label><br>
