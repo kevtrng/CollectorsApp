@@ -50,7 +50,12 @@ Route::get('/dashboard', function () {
 Route::get('/prevown', function () {
     return view('prevown/index');
 });
+
 Route::get('/wishlist', 'App\Http\Controllers\WishlistController@index');
+Route::get('/wishlist/wish', 'App\Http\Controllers\WishlistController@wish');
+Route::post('/wishlist/submitWish', 'App\Http\Controllers\WishlistController@submitWish');
+Route::delete('/wishlist/submitDeleteWish', 'App\Http\Controllers\WishlistController@submitDeleteWish');
+
 Route::get('/trade', function () {
     return view('trade/index');
 });

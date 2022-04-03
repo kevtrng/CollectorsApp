@@ -1,23 +1,31 @@
 @extends('layouts.app')
 @section('content')
 
-    <h1>Wishlist</h1>
+<script>
+	function del(id) {
+		fetch("/wishlist/submitDeleteWish/" + id, {
+			method:"delete"
+		})
+	}
+</script>
 
-    <div>
-{{--        foreach this div--}}
-        <ul>
-            <li>wish list item</li>
-            <li>wish list item</li>
-            <li>wish list item</li>
-            <li>wish list item</li>
-        </ul>
-        <button>Add to list</button>
-    </div>
+<h1>Wishlist</h1>
 
-	{{ $user }} <br>
+<div>
+	<ul>
+		@foreach ($wishlist as $wishlistItem)
+		<li>
+			{{$wishlistItem->name}} 
+			<a href={{$wishlistItem->url}}>{{$wishlistItem->url}}</a>
+			<form action="wishlist/submitDeleteWish" method='delete'>
+				<input type="hidden" value={{$wishlistItem->_id}}>
+				<input type="submit">
+			</form>
+		</li>
+		@endforeach
+	</ul>
+	<button><a href='/wishlist/wish'>Add to list</a></button>
+</div>
 	
-	@foreach ($wishlist as $wishlistItem)
-       {{$wishlistItem->name}} <a href={{$wishlistItem->url}}>{{$wishlistItem->url}}</a><br>
-    @endforeach
 
 @endsection
