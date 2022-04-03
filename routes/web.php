@@ -2,6 +2,7 @@
 
 use Illuminate\Support\Facades\Route;
 use app\Models\Item;
+use app\Http\Controllers\HomeController;
 use app\Http\Controllers\CollectionsController;
 
 /*
@@ -24,6 +25,8 @@ Route::get('/login', function () {
 Route::get('/register', function () {
     return view('home/register');
 });
+Route::post('/submitRegister', 'App\Http\Controllers\HomeController@submitRegister');
+Route::post('/submitLogin', 'App\Http\Controllers\HomeController@submitLogin');
 
 Route::get('/items', 'App\Http\Controllers\ItemController@item');
 

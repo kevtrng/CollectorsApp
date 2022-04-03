@@ -8,8 +8,10 @@
 			<div class="formstuff">
 				<h1>Register</h1>
 				<h4>Create your account!</h4>
-				<form method="post" action="/home/submitRegister" name="registerForm">
-					<input type="text" name="username" placeholder ="username"/><br>
+				<form method="post" action="/submitRegister" name="registerForm">
+					<!-- Cross-site request forgery -->
+					@csrf
+					<input type="text" name="name" placeholder ="username"/><br>
 					<input type="email" name="email" placeholder ="email"/><br>
 					<input type="password" name="password" placeholder ="password"/><br>
 					<input type="submit" />

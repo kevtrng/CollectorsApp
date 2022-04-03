@@ -3,4 +3,5 @@
 
 app to keep track of your inventory as a collector
 
+
 @endsection
