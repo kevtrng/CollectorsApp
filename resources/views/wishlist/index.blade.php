@@ -14,4 +14,7 @@
         <button>Add to list</button>
     </div>
 
+	{{ $user }} <br>
+	{{ $wishlist }}
+
 @endsection

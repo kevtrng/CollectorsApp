@@ -9,12 +9,6 @@ class Wishlist extends Model
 {
     use HasFactory;
 
-	protected $guarded = [
-		'url',
-		'email'
-	];
-
-	protected $fillable = [
-		'name'
-	];
+	protected $connection = 'mongodb';
+    protected $collection = 'wishlist';
 }

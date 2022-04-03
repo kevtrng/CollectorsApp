@@ -4,6 +4,7 @@ use Illuminate\Support\Facades\Route;
 use app\Models\Item;
 use app\Http\Controllers\HomeController;
 use app\Http\Controllers\CollectionsController;
+use app\Http\Controllers\WishlistController;
 
 /*
 |--------------------------------------------------------------------------
@@ -46,9 +47,7 @@ Route::get('/dashboard', function () {
 Route::get('/prevown', function () {
     return view('prevown/index');
 });
-Route::get('/wishlist', function () {
-    return view('wishlist/index');
-});
+Route::get('/wishlist', 'App\Http\Controllers\WishlistController@index');
 Route::get('/trade', function () {
     return view('trade/index');
 });

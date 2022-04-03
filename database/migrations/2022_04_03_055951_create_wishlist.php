@@ -15,9 +15,8 @@ return new class extends Migration
     {
         Schema::create('wishlist', function ($collection) {
             $collection->id();
-            $collection->string("name");
-            $collection->string("url")->nullable();
             $collection->string("email");
+            $collection->string("items");
             $collection->timestamps();
         });
     }
