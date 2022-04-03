@@ -12,11 +12,17 @@
                 <ul>
                     @if($collection->items)
                         @foreach($collection->items as $item)
-                            <li>{{$item->name}}</li>
+                          <li>{{$item['itemName']}}</li>
                         @endforeach
                     @endif
-                        <button type="button" onclick="window.location='{{ url("collections/list") }}'">
-                            view full list</button>
+                    <form method="get" action="/collections/list">
+                      @csrf
+                      <input type="hidden" value="{{$collection->collectionName}}" name="name"/>
+                      <br>
+                      <button type="submit" name="submit">view full list</button>
+                    </form>
+                        <!-- <button type="button" onclick="window.location='{{ url("collections/list") }}'">
+                            view full list</button> -->
                         <p>total worth: $1000</p>
                 </ul>
                 @endforeach

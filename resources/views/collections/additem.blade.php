@@ -1,11 +1,12 @@
 @extends('layouts.app')
 @section('content')
 
-    <h1>Add to Collection: {This particular collection}</h1>
+    <h1>Add to Collection: {{$collection}}</h1>
 
     <div>
         {{--        foreach this div--}}
         <form method="post" action="/collections/addItem">
+          @csrf
             <label for="itemName">Item name
                 <input type="text" name="itemName"/>
             </label><br>
@@ -33,6 +34,7 @@
             <label for="description">Description
                 <textarea name="description"></textarea>
             </label><br>
+            <input type="hidden" value="{{$collection}}" name="name"/><br>
             <button type="submit" name="submit">Submit</button>
         </form>
     </div>
