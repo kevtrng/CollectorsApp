@@ -36,7 +36,11 @@ Route::get('/collections/list', function () {
 Route::get('/collections/list/additem', function () {
     return view('collections/addItem');
 });
-Route::post('/collections/list/additem', 'CollectionsController@addItemPost');
+Route::post('/collections/createcollection', 'CollectionsController@createCollectionPost');
+Route::get('/collections/list/additem', function () {
+    return view('collections/addItem');
+});
+Route::post('/collections/additem', 'CollectionsController@addItemPost');
 
 
 Route::get('/dashboard', function () {

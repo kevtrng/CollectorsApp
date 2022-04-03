@@ -11,14 +11,14 @@
     <a href='/register'>Register</a>
 @endguest
 <!-- Links appear only when authenticated. -->
-@auth
+{{--@auth--}}
     <a href='/dashboard'>Dashboard</a> |
     <a href='/collections'>Collections</a> |
     <a href='/prevown'>Prev Owned</a> |
     <a href='/wishlist'>Wish List</a> |
     <a href='/trade'>Trade Requests</a> |
     <a href='/home/logout'>Logout</a> |
-@endauth
+{{--@endauth--}}
 <br>
 
 @yield('content')
