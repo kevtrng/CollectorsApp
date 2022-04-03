@@ -39,8 +39,8 @@ class WishlistController extends Controller
 	}
 
 	public function submitDeleteWish(Request $request) {
-		// $id = $request->route('id');
-		$id = $request->id;
+		$id = $request->route('id');
+		// $id = $request->id;
 		$wish = Wishlist::find($id);
 		$wish->delete();
 

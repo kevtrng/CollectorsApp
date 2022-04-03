@@ -17,8 +17,8 @@
 		<li>
 			{{$wishlistItem->name}} 
 			<a href={{$wishlistItem->url}}>{{$wishlistItem->url}}</a>
-			<form action="wishlist/submitDeleteWish" method='delete'>
-				<input type="hidden" value={{$wishlistItem->_id}}>
+			<form action="/wishlist/submitDeleteWish/{{$wishlistItem->_id}}" method='post'>
+				<!-- <input name="id" type="hidden" value={{$wishlistItem->_id}}> -->
 				<input type="submit">
 			</form>
 		</li>
