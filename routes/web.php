@@ -29,16 +29,19 @@ Route::get('/register', function () {
 Route::post('/submitRegister', 'App\Http\Controllers\HomeController@submitRegister');
 Route::post('/submitLogin', 'App\Http\Controllers\HomeController@submitLogin');
 
-Route::get('/collections', function () {
-    return view('collections/index');
-});
+Route::get('/collections', 'App\Http\Controllers\CollectionsController@index');
 Route::get('/collections/list', function () {
     return view('collections/list');
 });
+Route::get('/collections/list/createcollection', function () {
+    return view('collections/createcollection');
+});
+Route::post('/collections/createcollection', 'App\Http\Controllers\CollectionsController@createCollectionPost');
+
 Route::get('/collections/list/additem', function () {
     return view('collections/addItem');
 });
-Route::post('/collections/list/additem', 'CollectionsController@addItemPost');
+Route::post('/collections/additem', 'App\Http\Controllers\CollectionsController@addItemPost');
 
 
 Route::get('/dashboard', function () {
