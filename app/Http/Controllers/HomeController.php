@@ -59,6 +59,12 @@ class HomeController extends Controller
 
 	}
 
+	public function logout() {
+		\Auth::logout();
+		return redirect("/");
+
+	}
+
 	public function landing() {
 		return view ('home/landing');
 	}

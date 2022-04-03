@@ -26,6 +26,8 @@ Route::get('/login', function () {
 Route::get('/register', function () {
     return view('home/register');
 });
+
+Route::get('/logout', 'App\Http\Controllers\HomeController@logout');
 Route::post('/submitRegister', 'App\Http\Controllers\HomeController@submitRegister');
 Route::post('/submitLogin', 'App\Http\Controllers\HomeController@submitLogin');
 
