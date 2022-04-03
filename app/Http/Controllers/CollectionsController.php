@@ -26,10 +26,10 @@ class CollectionsController extends Controller
         return view('/collections/list/createcollection');
     }
     public function createCollectionPost(Request $request) {
-
+      $currentUser = $request->user()->email;
         $collection = new Collection();
         $collection->collectionName = $request->name;
-        $collection->userEmail = "test@test.com";
+        $collection->userEmail = $currentUser;
         $collection->items = [];
 
         $collection->save();
