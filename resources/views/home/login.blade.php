@@ -8,7 +8,9 @@
 			<div class="formstuff">
 				<h1>Welcome to Collector!</h1>
 				<h4>Log in using your email and password</h4>
-				<form method="post" action="/home/submitLogin" name="loginForm">
+				<form method="post" action="/submitLogin" name="loginForm">
+					<!-- Cross-site request forgery -->
+					@csrf 
 					<input type="email" name="email" placeholder="email"/><br>
 					<input type="password" name="password" placeholder="password"/><br>
 					<input type="submit" />
