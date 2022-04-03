@@ -9,7 +9,7 @@ class CollectionsController extends Controller
 {
 
     public function index() {
-        $collections = Collection::where('userEmail','=', 'test@test.com');
+        $collections = Collection::where('userEmail', 'test@test.com')->get();
 //        $collections = Collection::all();
 //        $collections = $collections->toArray();
         $type = gettype($collections);
