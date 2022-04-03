@@ -1,14 +1,6 @@
 @extends('layouts.app')
 @section('content')
 
-<script>
-	function del(id) {
-		fetch("/wishlist/submitDeleteWish/" + id, {
-			method:"delete"
-		})
-	}
-</script>
-
 <h1>Wishlist</h1>
 
 <div>
@@ -17,9 +9,10 @@
 		<li>
 			{{$wishlistItem->name}} 
 			<a href={{$wishlistItem->url}}>{{$wishlistItem->url}}</a>
-			<form action="/wishlist/submitDeleteWish/{{$wishlistItem->_id}}" method='post'>
-				<!-- <input name="id" type="hidden" value={{$wishlistItem->_id}}> -->
-				<input type="submit">
+			<form action="/wishlist/submitDeleteWish" method='post'>
+				@csrf
+				<input name="id" type="hidden" value={{$wishlistItem->_id}} />
+				<input type="submit" value="delete"/>
 			</form>
 		</li>
 		@endforeach

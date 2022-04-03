@@ -6,7 +6,7 @@
 <div>
 	<form method='POST' action='/wishlist/submitWish'>
 		@csrf
-		<input type='text' name='name' placeholder="Onyx Ring" /><br>
+		<input type='text' name='name' placeholder="Onyx Ring" required/><br>
 		<input type='text' name='url' placeholder="https://link-to-your-item.example" /><br>
 		<input type='submit'/><br>
 	</form>
