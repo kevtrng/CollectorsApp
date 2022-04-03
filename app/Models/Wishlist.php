@@ -16,5 +16,5 @@ class Wishlist extends Model
 
 	protected $fillable = [
 		'name'
-	]
+	];
 }
