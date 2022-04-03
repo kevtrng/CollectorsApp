@@ -15,6 +15,9 @@
     </div>
 
 	{{ $user }} <br>
-	{{ $wishlist }}
+	
+	@foreach ($wishlist as $wishlistItem)
+       {{$wishlistItem->name}} <a href={{$wishlistItem->url}}>{{$wishlistItem->url}}</a><br>
+    @endforeach
 
 @endsection

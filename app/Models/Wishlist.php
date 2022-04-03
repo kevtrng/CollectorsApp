@@ -11,4 +11,11 @@ class Wishlist extends Model
 
 	protected $connection = 'mongodb';
     protected $collection = 'wishlist';
+
+	protected $fillable = [
+		'email',
+		'url',
+		'name'
+	];
+
 }
