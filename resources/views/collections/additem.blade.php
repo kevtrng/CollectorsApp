@@ -1,3 +1,6 @@
+<link href="{{ asset('css/layout.css') }}" rel="stylesheet">
+<link href="{{ asset('css/collection.css') }}" rel="stylesheet">
+
 @extends('layouts.app')
 @section('content')
 
