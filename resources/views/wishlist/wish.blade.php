@@ -1,3 +1,6 @@
+<link href="{{ asset('css/wishlist.css') }}" rel="stylesheet">
+<link href="{{ asset('css/layout.css') }}" rel="stylesheet">
+
 @extends('layouts.app')
 @section('content')
 
@@ -8,7 +11,7 @@
 		@csrf
 		<input type='text' name='name' placeholder="Onyx Ring" required/><br>
 		<input type='text' name='url' placeholder="https://link-to-your-item.example" /><br>
-		<input type='submit'/><br>
+		<input class = "add" type='submit'/><br>
 	</form>
 </div>
 	
