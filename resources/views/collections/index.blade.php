@@ -1,9 +1,11 @@
+<link href="{{ asset('css/layout.css') }}" rel="stylesheet">
+<link href="{{ asset('css/collection.css') }}" rel="stylesheet">
 @extends('layouts.app')
 @section('content')
 
     <h1>Your Collections</h1>
 
-    <button type="button" onclick="window.location='{{ url("collections/list/createcollection") }}'">
+    <button class = "createCollection" type="button" onclick="window.location='{{ url("collections/list/createcollection") }}'">
         Create Collection</button>
         <div>
             @if ($collections)

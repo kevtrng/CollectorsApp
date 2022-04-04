@@ -1,3 +1,6 @@
+<link href="{{ asset('css/layout.css') }}" rel="stylesheet">
+<link href="{{ asset('css/collection.css') }}" rel="stylesheet">
+
 @extends('layouts.app')
 @section('content')
 
@@ -35,10 +38,11 @@
                 <textarea name="description"></textarea>
             </label><br>
             <input type="hidden" value="{{$collection}}" name="name"/><br>
-            <button type="submit" name="submit">Submit</button>
+            <button class = "addToList" type="submit" name="submit">Submit</button>
+            <button class = "back" type="button" onclick="window.location='{{ url("collections/list/") }}'">cancel</button>
         </form>
     </div>
-    <button type="button" onclick="window.location='{{ url("collections/list/") }}'">cancel</button>
+   
 
 @endsection
 

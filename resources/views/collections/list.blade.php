@@ -1,3 +1,6 @@
+<link href="{{ asset('css/layout.css') }}" rel="stylesheet">
+<link href="{{ asset('css/collection.css') }}" rel="stylesheet">
+
 @extends('layouts.app')
 @section('content')
 
@@ -6,7 +9,12 @@
       @csrf
       <input type="hidden" value="{{$collectionName}}" name="name"/>
       <br>
-      <button type="submit" name="submit">Add to list</button>
+
+      <div class = "button">
+        <button class = "addToList" type="submit" name="submit">Add to list</button>
+        <button class = "back" type="button" onclick="window.location='{{ url("collections/") }}'">Back to collections</button>
+      </div> 
+     
     </form>
     <!-- <button type="button" onclick="window.location='{{ url("collections/list/additem") }}'">Add to list</button> -->
     <div>
@@ -20,7 +28,7 @@
 					@csrf
 					<input type="hidden" value="{{$item['itemName']}}" name="name"/>
 					<input type="hidden" value="{{$collect->_id}}" name="id"/>
-					<input type="submit" value="Delete"/>
+					<input class = "delete" type="submit" value="Delete"/>
 				</form>
               @endforeach
             @endif
@@ -30,7 +38,6 @@
       <p>total worth: $1000</p>
     </div>
 <br>
-    <button type="button" onclick="window.location='{{ url("collections/") }}'">Back to collections</button>
 
 
 @endsection
