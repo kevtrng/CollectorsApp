@@ -1,5 +1,6 @@
 @extends('layouts.app')
 @section('content')
+<link href="{{ asset('css/wishlist.css') }}" rel="stylesheet">
 
 <h1>Wishlist</h1>
 
@@ -7,7 +8,7 @@
 	<ul>
 		@foreach ($wishlist as $wishlistItem)
 		<li>
-			{{$wishlistItem->name}} 
+			{{$wishlistItem->name}} <br/>
 			<a href={{$wishlistItem->url}}>{{$wishlistItem->url}}</a>
 			<form action="/wishlist/submitDeleteWish" method='post'>
 				@csrf
@@ -17,7 +18,7 @@
 		</li>
 		@endforeach
 	</ul>
-	<button><a href='/wishlist/wish'>Add to list</a></button>
+	<button class = "addToList"><a href='/wishlist/wish'>Add to list</a></button>
 </div>
 	
 
