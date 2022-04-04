@@ -16,6 +16,12 @@
             @if($collect->items)
               @foreach($collect->items as $item)
                 <li>{{$item['itemName']}}</li>
+				<form action='/collections/deleteItem' method="post">
+					@csrf
+					<input type="hidden" value="{{$item['itemName']}}" name="name"/>
+					<input type="hidden" value="{{$collect->_id}}" name="id"/>
+					<input type="submit" value="Delete"/>
+				</form>
               @endforeach
             @endif
           @endforeach

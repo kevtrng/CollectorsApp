@@ -4,6 +4,7 @@ namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
 use App\Models\Collection;
+use App\Models\PrevOwned;
 
 class CollectionsController extends Controller
 {
@@ -18,9 +19,9 @@ class CollectionsController extends Controller
 	}
 
     public function list(Request $request) {
-      $currentCollection = $request->name;
-      $collection = Collection::where('collectionName', $currentCollection)->get();
-      return view('/collections/list', ['collectionName' => $currentCollection, 'collection' => $collection]);
+      $currentCollectionName = $request->name;
+      $collection = Collection::where('_id', $request->id)->get();
+      return view('/collections/list', ['collectionName' => $currentCollectionName, 'collection' => $collection]);
     }
     public function createCollection() {
         return view('/collections/list/createcollection');
@@ -50,4 +51,19 @@ class CollectionsController extends Controller
       // return redirect("/collections/list", 302, ['collectionName' => $request->name, 'collection' => $collection]);
       return redirect("/collections");
     }
+
+	public function deleteItem(Request $request) {
+		$id = $request->id;
+		$name = $request->name;
+
+		$p = new PrevOwned();
+		$p->belongsTo = $request->user()->email;
+		$p->name = $name;
+		$p->save();
+
+		Collection::where("_id",$id)->pull("items", ['itemName' => $name]);
+
+		return redirect("/collections");
+		// $item->delete();
+	}
 }
