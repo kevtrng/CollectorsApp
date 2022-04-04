@@ -32,23 +32,21 @@ Route::post('/submitRegister', 'App\Http\Controllers\HomeController@submitRegist
 Route::post('/submitLogin', 'App\Http\Controllers\HomeController@submitLogin');
 
 Route::get('/collections', 'App\Http\Controllers\CollectionsController@index');
-
 Route::get('collections/list', 'App\Http\Controllers\CollectionsController@list');
+Route::get('/collections/list/additem', 'App\Http\Controllers\CollectionsController@addItem');
 Route::get('/collections/list/createcollection', function () {
     return view('collections/createcollection');
 });
 Route::post('/collections/createcollection', 'App\Http\Controllers\CollectionsController@createCollectionPost');
 
-Route::get('/collections/list/additem', 'App\Http\Controllers\CollectionsController@addItem');
 Route::post('/collections/addItem', 'App\Http\Controllers\CollectionsController@addItemPost');
+Route::post('/collections/deleteItem', 'App\Http\Controllers\CollectionsController@deleteItem');
 
 
 Route::get('/dashboard', function () {
     return view('dashboard/index');
 });
-Route::get('/prevown', function () {
-    return view('prevown/index');
-});
+Route::get('/prevown', 'App\Http\Controllers\PrevOwnController@index');
 
 Route::get('/wishlist', 'App\Http\Controllers\WishlistController@index');
 Route::get('/wishlist/wish', 'App\Http\Controllers\WishlistController@wish');

@@ -18,6 +18,7 @@
                     <form method="get" action="/collections/list">
                       @csrf
                       <input type="hidden" value="{{$collection->collectionName}}" name="name"/>
+                      <input type="hidden" value="{{$collection->_id}}" name="id"/>
                       <br>
                       <button type="submit" name="submit">view full list</button>
                     </form>
