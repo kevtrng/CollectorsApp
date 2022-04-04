@@ -24,7 +24,7 @@
     font-family: "Rubik", sans-serif;
 }
 
-.back{
+.back {
     padding: 12px 10px;
     border: 1;
     border-color: #b3b9c4;
@@ -36,11 +36,10 @@
     margin-left: 1em;
 }
 
-.button{
+.button {
     display: flex;
     justify-content: center;
     margin-left: 1em;
-    
 }
 
 ul {
@@ -74,7 +73,16 @@ input[type="text"] {
     margin-bottom: 1em;
 }
 
-form{
+form {
     margin: 0 auto;
     text-align: center;
+}
+
+label {
+    color: rgba(0, 0, 0, 0.4);
+}
+
+h2 {
+    text-align: center;
+    border-top: 4px solid #abb5fd;
 }
