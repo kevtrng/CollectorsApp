@@ -3,6 +3,8 @@
 <link href="{{ asset('css/wishlist.css') }}" rel="stylesheet">
 
 <h1>Wishlist</h1>
+<h4>Want something? Add to your wishlist!</h4>
+<button class = "addToList"><a href='/wishlist/wish'>Add to list</a></button>
 
 <div>
 	<ul>
@@ -18,7 +20,6 @@
 		</li>
 		@endforeach
 	</ul>
-	<button class = "addToList"><a href='/wishlist/wish'>Add to list</a></button>
 </div>
 	
 
