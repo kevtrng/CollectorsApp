@@ -43,7 +43,7 @@ Route::post('/collections/addItem', 'App\Http\Controllers\CollectionsController@
 Route::post('/collections/deleteItem', 'App\Http\Controllers\CollectionsController@deleteItem');
 
 
-Route::get('/dashboard', function () {
+Route::get('/', function () {
     return view('dashboard/index');
 });
 Route::get('/prevown', 'App\Http\Controllers\PrevOwnController@index');
